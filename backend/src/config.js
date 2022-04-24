@@ -7,8 +7,8 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "TheWormNFTies";
-const description = "Having some fun with our bars logo ... ";
+const namePrefix = "BirdLey NFTies";
+const description = "Just A fun lil guy Named Birdley trying to figure out his look.Hope you enjoy The NFTies";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 // If you have selected Solana then the collection starts from 0 automatically
@@ -16,10 +16,12 @@ const layerConfigurations = [
   {
     growEditionSizeTo: 100,
     layersOrder: [
-      { name: "Background" },
-      { name: "static" },
-      { name: "Eye Hole" },
-      { name: "Head" },
+      { name: "Body" },
+      { name: "Feet" },
+      { name: "Pants" },
+      { name: "Eyes" },
+      { name: "Beak" },
+      { name: "white" },
     ],
   },
 ];
@@ -29,8 +31,8 @@ const shuffleLayerConfigurations = true;
 const debugLogs = false;
 
 const format = {
-  width: 2100,
-  height: 1500,
+  width: 2048,
+  height: 2048,
   smoothing: false,
 };
 
@@ -46,17 +48,17 @@ const LIMIT = 2; // Your API key rate limit
 const CHAIN = 'rinkeby'; // only rinkeby or polygon
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'TheWormNFTies';
-const CONTRACT_SYMBOL = 'WORM';
+const CONTRACT_NAME = 'BirdleyNFTies';
+const CONTRACT_SYMBOL = 'BRDY';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
 const OWNER_ADDRESS = '0x7d59C6160c9c72bD22cd35E43F7B4359B519173A';
 const TREASURY_ADDRESS = '0x7d59C6160c9c72bD22cd35E43F7B4359B519173A';
-const MAX_SUPPLY = 100; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
-const MINT_PRICE = 9; // Minting price per NFT. Rinkeby = ETH, Polygon = MATIC. CANNOT BE UPDATED!
+const MAX_SUPPLY = 5000; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
+const MINT_PRICE = .001; // Minting price per NFT. Rinkeby = ETH, Polygon = MATIC. CANNOT BE UPDATED!
 const TOKENS_PER_MINT = 10; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PUBLIC_MINT_START_DATE = "2022-03-20T11:30:48+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
+const PUBLIC_MINT_START_DATE = "2022-04-16T11:30:48+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
 
 // OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
 const PRESALE_MINT_START_DATE = null; // Optional. Eg: 2022-02-08T11:30:48+00:00
@@ -70,10 +72,10 @@ const PRESALE_WHITELISTED_ADDRESSES = []; // only update if you want to manually
 let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually include it
 
 // Generic Metadata is optional if you want to reveal your NFTs
-const GENERIC = false; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
+const GENERIC = true; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
 const GENERIC_TITLE = CONTRACT_NAME; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
-const GENERIC_DESCRIPTION = "REPLACE THIS"; // Replace with what you want the generic descriptions to say.
-const GENERIC_IMAGE = "https://ipfs.io/ipfs/QmUf9tDbkqnfHkQaMdFWSGAeXwVXWA61pFED7ypx4hcsfh"; // Replace with your generic image that will display for all NFTs pre-reveal.
+const GENERIC_DESCRIPTION = "Birdley is just a guy wondering around trying to find himself in this crazy MeatVerse. Check out his new outfits for his adventures"; // Replace with what you want the generic descriptions to say.
+const GENERIC_IMAGE = "https://npm upipfs.io/ipfs/bafybeiecbih3eztz2t4eww7b5pcrnxjrjcwwqezou3zyoj5byhc6pa6azy"; // Replace with your generic image that will display for all NFTs pre-reveal.
 
 // Automatically set contract address if deployed using the deployContract.js script
 try {
@@ -95,7 +97,7 @@ const solanaMetadata = {
   external_url: "https://www.youtube.com/c/hashlipsnft",
   creators: [
     {
-      address: "0x7d59C6160c9c72bD22cd35E43F7B4359B519173A",
+      address: "7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC",
       share: 100,
     },
   ],
@@ -133,7 +135,6 @@ const background = {
 };
 
 const rarityDelimiter = "#";
-
 
 const uniqueDnaTorrance = 10000;
 
