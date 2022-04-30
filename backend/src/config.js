@@ -73,7 +73,7 @@ const PRESALE_WHITELISTED_ADDRESSES = []; // only update if you want to manually
 let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually include it
 
 // Generic Metadata is optional if you want to reveal your NFTs
-const GENERIC = true; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
+const GENERIC = false; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
 const GENERIC_TITLE = CONTRACT_NAME; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
 const GENERIC_DESCRIPTION = "Birdley is just a guy wondering around trying to find himself in this crazy MeatVerse. Check out his new outfits for his adventures"; // Replace with what you want the generic descriptions to say.
 const GENERIC_IMAGE = "https://npm upipfs.io/ipfs/bafybeiecbih3eztz2t4eww7b5pcrnxjrjcwwqezou3zyoj5byhc6pa6azy"; // Replace with your generic image that will display for all NFTs pre-reveal.
@@ -93,12 +93,12 @@ try {
 // END NFTPort Info
 
 const solanaMetadata = {
-  symbol: "YC",
+  symbol: "BRDY",
   seller_fee_basis_points: 1000, // Define how much % you want from secondary market sales 1000 = 10%
-  external_url: "https://www.youtube.com/c/hashlipsnft",
+  external_url: "https://mdidev.io",
   creators: [
     {
-      address: "7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC",
+      address: "0x7d59C6160c9c72bD22cd35E43F7B4359B519173A",
       share: 100,
     },
   ],
